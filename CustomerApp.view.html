@@ -1,0 +1,41 @@
+Customer Code :<input [(ngModel)]="customerModel.CustomerCode" type="text"/><br>
+Customer Name :<input [(ngModel)]="customerModel.CustomerName" type="text"/><br>
+Customer Amount :<input [(ngModel)]="customerModel.CustomerAmount" type="text"/><br>
+<input type="button" (click)="add()" value="submit"/>
+<table>
+    <tr let customerModelTemp of customerModelList></tr>
+</table>
+{{customerModel.CustomerCode}}
+{{customerModel.CustomerName}}
+{{customerModel.CustomerAmount}}
+<table>
+    <tr>
+      <td>Customer code</td>
+      <td>Customer name</td>
+      <td>Customer amount</td>
+    </tr>
+    <tr *ngFor="let cust of customerModelList">
+      <td>{{cust.CustomerCode}}</td>
+      <td>{{cust.CustomerName}}</td>
+      <td>{{cust.CustomerAmount}}</td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td>Customer id</td>
+      <td>Customer name</td>
+      <td>Customer email</td>
+      <td>Customer mobile</td>
+      <td>Customer address</td>
+      <td>Customer qualification</td>
+    </tr>
+    <tr *ngFor="let cus of userList">
+      <td>{{cus.id}}</td>
+      <td>{{cus.name}}</td>
+      <td>{{cus.email}}</td>
+      <td>{{cus.mobile}}</td>
+      <td>{{cus.address}}</td>
+      <td>{{cus.qualification}}</td>     
+    </tr>
+  </table>
